@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+<meta name="theme-color" content="#05070a" />
+<title>Privacy — NHCheck</title>
+<meta name="description" content="NHCheck Lite collects nothing: no account, no analytics, no tracking. What a run contacts, and why Android asks for a location permission." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="assets/style.css" />
+</head>
+<body>
+
+<header class="topbar">
+  <div class="shell">
+    <a class="brand" href="index.html">NHCheck</a>
+    <nav class="nav">
+      <a href="docs.html">Documentation</a>
+      <a href="support.html">Support</a>
+      <a href="privacy.html" aria-current="page">Privacy</a>
+    </nav>
+  </div>
+</header>
+
+<div class="page-head">
+  <div class="shell">
+    <p class="eyebrow">Last updated 19 August 2026</p>
+    <h1>NHCheck Lite collects nothing</h1>
+    <p class="lede">
+      No account, no analytics, no crash reporting, no advertising, no third-party
+      SDKs. Nothing you do in the app is sent anywhere, and there is no server behind
+      it to send anything to.
+    </p>
+  </div>
+</div>
+
+<div class="shell prose">
+
+  <h2>What is collected</h2>
+  <p>Nothing. NHCheck Lite does not ask you to sign in, does not collect or transmit
+  personal information, does not upload results, does not read your contacts, photos,
+  files or position, and does not track you across apps or websites.</p>
+
+  <h2>What stays on the device</h2>
+  <p>
+    Your language choice, so it is remembered next time. That is all, and it goes when
+    you uninstall the app. Results are held only while the app is open.
+  </p>
+
+  <h2>What a run sends</h2>
+  <p>The app measures your connection, so a run puts traffic on the network. Only when
+  you press Run, and only this:</p>
+  <div class="table-wrap">
+    <table>
+      <tbody>
+        <tr><td><strong>Your router</strong></td><td>Echo requests that never leave your own network</td></tr>
+        <tr><td><strong>The first public router past it</strong></td><td>Probes to find it, then echo requests to measure it</td></tr>
+        <tr><td><strong>A DNS resolver</strong></td><td>One name lookup, to time it. No page is fetched.</td></tr>
+        <tr><td><strong>Cloudflare</strong></td><td>Filler data down and up for eight seconds each, to measure throughput</td></tr>
+        <tr><td><strong>A public-address service</strong></td><td>An empty request whose reply is your public IP, shown on your own screen</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p>
+    Any server you contact sees the public address the request came from — that is true
+    of every app on your phone. Nothing identifying you is attached: no identifier, no
+    device name, no account, no results.
+  </p>
+
+  <h2>The location permission</h2>
+  <p>
+    Android requires it before the system will disclose the connected Wi-Fi network's
+    name or return scan results, because a list of nearby networks can be used to infer
+    position. The app asks for it for that reason alone: it never requests a location
+    fix and never touches GPS. Decline it and every check still runs. You can withdraw
+    it in <strong>Settings → Apps → NHCheck Lite → Permissions</strong>.
+  </p>
+
+  <h2>Your rights</h2>
+  <p>
+    Rights of access, correction, deletion and portability apply to personal data that
+    has been collected. None is, so there is nothing to disclose, export or erase.
+  </p>
+
+  <h2>Changes</h2>
+  <p>
+    If a future version changes what the app contacts or keeps, this page is updated
+    before that version is released, and the date above changes with it.
+  </p>
+
+  <h2>Contact</h2>
+  <p>
+    NHCheck · Jeddah, Saudi Arabia ·
+    <a href="mailto:info@nhcheck.net">info@nhcheck.net</a>
+  </p>
+
+</div>
+
+<footer>
+  <div class="shell foot-grid">
+    <div class="foot-meta">© 2026 NHCheck · Jeddah, Saudi Arabia</div>
+    <div class="foot-links">
+      <a href="index.html">Home</a>
+      <a href="docs.html">Documentation</a>
+      <a href="support.html">Support</a>
+      <a href="mailto:info@nhcheck.net">info@nhcheck.net</a>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+<meta name="theme-color" content="#05070a" />
+<title>NHCheck</title>
+<meta name="description" content="NHCheck makes network diagnostic tools. The first is NHCheck Lite for Android: five real checks, one page, a verdict each." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="assets/style.css" />
+</head>
+<body>
+
+<header class="topbar">
+  <div class="shell">
+    <a class="brand" href="index.html">NHCheck</a>
+    <nav class="nav">
+      <a href="docs.html">Documentation</a>
+      <a href="support.html">Support</a>
+      <a href="privacy.html">Privacy</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+
+<section class="hero">
+  <div class="shell">
+    <p class="eyebrow">First product</p>
+    <h1>NHCheck Lite<br /><span class="accent">Five checks, one page.</span></h1>
+    <p class="lede">
+      Your connection is slow. NHCheck Lite runs five real measurements in about
+      thirty seconds and names which one is at fault — the Wi-Fi in the room, the
+      router, the line out of the house, or the name lookup. Free, on Android.
+    </p>
+    <div class="cta-row">
+      <a class="btn btn-primary" href="#get">Get it</a>
+      <a class="btn btn-ghost" href="docs.html">Documentation</a>
+    </div>
+    <p class="hero-note">Android 8.0+ · English &amp; العربية · no account, no tracking</p>
+
+    <figure class="shot">
+      <img src="assets/screenshot-result.png" width="540" height="1200"
+           alt="NHCheck Lite after a run: the path from this device to the LAN gateway with its measured latency, a recommendation to turn on WPA2 or WPA3, and the five checks with their verdicts — Wi-Fi WARN, LAN gateway PASS, ISP gateway SKIP, DNS WARN, speed test PASS." />
+      <figcaption>A finished run — the path, the fix, and a verdict each</figcaption>
+    </figure>
+  </div>
+</section>
+
+<section id="checks">
+  <div class="shell">
+    <h2 class="section-title">The five checks</h2>
+    <div class="table-wrap" style="margin-top:20px">
+      <table>
+        <tbody>
+          <tr><td><strong>Wi-Fi status</strong></td><td>Signal, channel, interference and security — and the clearest channel to move to</td></tr>
+          <tr><td><strong>LAN gateway</strong></td><td>Eight echoes to your router: a fault here is inside the house</td></tr>
+          <tr><td><strong>ISP gateway</strong></td><td>The first public hop past it: a fault here is on the line</td></tr>
+          <tr><td><strong>DNS lookup</strong></td><td>A name resolved and timed</td></tr>
+          <tr><td><strong>Speed test</strong></td><td>Real download and upload, eight seconds each</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p style="margin-top:18px;color:var(--text-muted)">
+      Every check performs a real network operation — nothing is simulated. Each ends
+      in PASS, WARN or FAIL, and whatever fell short comes with the fix behind it.
+    </p>
+  </div>
+</section>
+
+<section id="get">
+  <div class="shell">
+    <h2 class="section-title">Get it</h2>
+    <p class="lede">
+      Coming to Google Play — the listing is being prepared. Write to
+      <a href="mailto:info@nhcheck.net">info@nhcheck.net</a> to be told when it goes
+      live, or to ask for early access.
+    </p>
+    <div class="cta-row">
+      <a class="btn btn-primary" href="mailto:info@nhcheck.net?subject=NHCheck%20Lite">Email us</a>
+      <a class="btn btn-ghost" href="support.html">Support</a>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="shell foot-grid">
+    <div class="foot-meta">© 2026 NHCheck · Jeddah, Saudi Arabia</div>
+    <div class="foot-links">
+      <a href="docs.html">Documentation</a>
+      <a href="support.html">Support</a>
+      <a href="privacy.html">Privacy</a>
+      <a href="mailto:info@nhcheck.net">info@nhcheck.net</a>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
