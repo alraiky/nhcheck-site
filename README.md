@@ -30,9 +30,21 @@ work from a subpath as well as from a domain root.
 
 ## Notes
 
-- English only for now. The app ships English and Arabic; an Arabic mirror would
-  be a copy of each page with `dir="rtl"` plus a switch in the top bar.
+- The pages describe **1.3 (versionCode 19)**, the build prepared for Play. They
+  deliberately leave out the `cellular` branch, which is not shipped: when it
+  does ship, the privacy policy gains the mobile network — the operator, the
+  radio and signal, and the identities of the cells in range — and the in-app
+  location disclosure has to say so first.
+- English only for now. The app itself ships six languages (English, Arabic,
+  Spanish, Urdu, Portuguese, French); an Arabic mirror of this site would be a
+  copy of each page with `dir="rtl"` plus a switch in the top bar.
 - Every threshold quoted in `docs.html` is one the app actually applies. When a
   threshold changes in the app, change it here too.
+- `privacy.html` is what Play's User Data policy is judged against, so it has to
+  keep describing the app exactly. `android-lite/play/policy-review.md` in the
+  app repository is where that is checked each release.
+- The screenshots come from `android-lite/play/graphics/screenshots-phone/en-US/`
+  (1, 7 and 8), cropped of their letterboxing and halved to 540 wide. They are
+  demo captures: the LAN names are `Device-NN` stand-ins, never real hostnames.
 - The store link in `index.html` is a placeholder until the Google Play listing
   is live.

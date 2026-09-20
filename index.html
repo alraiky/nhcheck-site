@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
 <meta name="theme-color" content="#05070a" />
 <title>NHCheck</title>
-<meta name="description" content="NHCheck makes network diagnostic tools. The first is NHCheck Lite for Android: five real checks, one page, a verdict each." />
+<meta name="description" content="NHCheck makes network diagnostic tools. The first is NHCheck Lite for Android: five real checks, one page, a verdict each — plus a Wi-Fi analyser and a list of what is on your network." />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
@@ -39,12 +39,12 @@
       <a class="btn btn-primary" href="#get">Get it</a>
       <a class="btn btn-ghost" href="docs.html">Documentation</a>
     </div>
-    <p class="hero-note">English &amp; العربية · no account, no tracking</p>
+    <p class="hero-note">Six languages · dark or light · no account, no tracking</p>
 
     <figure class="shot">
-      <img src="assets/screenshot-result.png" width="540" height="1200"
-           alt="NHCheck Lite after a run: the path from this device to the LAN gateway with its measured latency, a recommendation to turn on WPA2 or WPA3, and the five checks with their verdicts — Wi-Fi WARN, LAN gateway PASS, ISP gateway SKIP, DNS WARN, speed test PASS." />
-      <figcaption>A finished run — the path, the fix, and a verdict each</figcaption>
+      <img src="assets/screenshot-result.png" width="540" height="1147"
+           alt="NHCheck Lite after a run: one framed line reading that nothing is broken and name lookups are the slow step; the path from this device through the LAN gateway and a second router out to the ISP gateway, each hop with its measured latency; four passed and one warned; and a recommendation to move the network to channel 149." />
+      <figcaption>A finished run — the culprit named, the path drawn, a verdict each</figcaption>
     </figure>
   </div>
 </section>
@@ -56,7 +56,7 @@
       <table>
         <tbody>
           <tr><td><strong>Wi-Fi status</strong></td><td>Signal, channel, interference and security — and the clearest channel to move to</td></tr>
-          <tr><td><strong>LAN gateway</strong></td><td>Eight echoes to your router: a fault here is inside the house</td></tr>
+          <tr><td><strong>LAN gateway</strong></td><td>Eight echoes to your router, then a sweep of the network behind it: a fault here is inside the house</td></tr>
           <tr><td><strong>ISP gateway</strong></td><td>The first public hop past it: a fault here is on the line</td></tr>
           <tr><td><strong>DNS lookup</strong></td><td>A name resolved and timed</td></tr>
           <tr><td><strong>Speed test</strong></td><td>Real download and upload, eight seconds each</td></tr>
@@ -65,7 +65,15 @@
     </div>
     <p style="margin-top:18px;color:var(--text-muted)">
       Every check performs a real network operation — nothing is simulated. Each ends
-      in PASS, WARN or FAIL, and whatever fell short comes with the fix behind it.
+      in PASS, WARN or FAIL, and whatever fell short comes with the fix behind it. The
+      run closes by naming the culprit in one sentence, taken from the earliest failure
+      along the path rather than the loudest number.
+    </p>
+    <p style="margin-top:18px;color:var(--text-muted)">
+      Two rows open further: the Wi-Fi row into an analyser that draws every network in
+      range over the spectrum it occupies, and the LAN row into the list of what
+      answered on your network, each by the name it publishes.
+      <a href="docs.html">Both are described in the documentation</a>.
     </p>
   </div>
 </section>

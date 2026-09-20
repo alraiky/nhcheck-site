@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
 <meta name="theme-color" content="#05070a" />
 <title>Documentation — NHCheck</title>
-<meta name="description" content="What each of NHCheck Lite's five checks measures, and the thresholds behind every verdict." />
+<meta name="description" content="What each of NHCheck Lite's five checks measures, the thresholds behind every verdict, and the Wi-Fi analyser and LAN page behind the rows." />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
@@ -31,6 +31,8 @@
     <p class="lede">
       Five checks run in order, about thirty seconds in all. The speed test is last
       because it saturates the connection and would corrupt the figures before it.
+      Two of the rows open into a page of their own: the air around you, and the
+      devices on your network.
     </p>
   </div>
 </div>
@@ -43,7 +45,7 @@
       <thead><tr><th>Check</th><th>What it does</th></tr></thead>
       <tbody>
         <tr><td><strong>Wi-Fi status</strong></td><td>Reads signal, noise, channel, band, standard and security, then scans the neighbours and names the clearest channel in the band</td></tr>
-        <tr><td><strong>LAN gateway</strong></td><td>Eight echoes to your router — latency, loss and jitter of the Wi-Fi link itself</td></tr>
+        <tr><td><strong>LAN gateway</strong></td><td>Eight echoes to your router — latency, loss and jitter of the Wi-Fi link itself — then a sweep of the network behind it, counting what answered</td></tr>
         <tr><td><strong>ISP gateway</strong></td><td>Finds the first public router past yours and measures it with six echoes</td></tr>
         <tr><td><strong>DNS lookup</strong></td><td>Resolves a name through your network's resolver and times it</td></tr>
         <tr><td><strong>Speed test</strong></td><td>Download then upload, eight seconds each over parallel streams, measured after a warm-up</td></tr>
@@ -52,8 +54,8 @@
   </div>
 
   <figure class="shot">
-    <img src="assets/screenshot-running.png" width="540" height="1200"
-         alt="NHCheck Lite mid-run: the path diagram above a Stop button, the finished checks showing their figures, and the speed test reading download 7.18 Mbps over 7 of 8 streams." />
+    <img src="assets/screenshot-running.png" width="540" height="1147"
+         alt="NHCheck Lite mid-run: the path diagram above a Stop button, Wi-Fi status already passed at −52 dBm on 5 GHz channel 36, and the LAN gateway row sweeping the network — 350 of 508 addresses asked, 42 found." />
     <figcaption>A run in progress — each check reports as it finishes</figcaption>
   </figure>
 
@@ -109,12 +111,38 @@
     reason, never as <span class="mono">0.00 Mbps</span>.
   </p>
 
+  <h2>Behind two of the rows</h2>
+  <p>
+    <strong>The Wi-Fi row</strong> opens an analyser. Every network in range is drawn
+    as an arc over the spectrum it occupies, so two networks nominally on different
+    channels are visibly on top of each other when they overlap. Beside it, every radio
+    ranked by strength, and your own link traced second by second — signal as bars,
+    signal-to-noise as a red line over them — so a sag shows as a shape rather than
+    disappearing into an average.
+  </p>
+  <p>
+    <strong>The LAN row</strong> opens the list of what is on your network: every
+    address that answered the sweep, with the name it publishes — a hostname, a UPnP
+    name, or the service it advertises — your router and this phone marked. The names
+    come from the announcements those devices already broadcast, over mDNS, SSDP and
+    Bonjour. They are read on your device, shown on it, and held only while the app is
+    open; see the <a href="privacy.html">privacy policy</a>.
+  </p>
+
+  <figure class="shot">
+    <img src="assets/screenshot-lan.png" width="540" height="1147"
+         alt="The LAN page: 47 answered the sweep, listed by address — some naming themselves, others marked as having given no name, one tagged Android TV and This device, another tagged web page — above an Ask again button." />
+    <figcaption>The LAN page — what answered, and what it calls itself</figcaption>
+  </figure>
+
   <h2>Permission</h2>
   <p>
     Android requires a location permission before an app may read the connected Wi-Fi
-    network's name or scan for neighbours. NHCheck Lite asks for it for that alone and
-    never reads your position. Decline it and every check still runs — you lose the
-    network name and the channel advice. See the <a href="privacy.html">privacy policy</a>.
+    network's name or scan for neighbours. NHCheck Lite asks for it for that alone: it
+    never requests a location fix, never touches GPS, and never reads location in the
+    background. Decline it and every check still runs — you lose the network name, the
+    channel advice and the analyser's neighbour list. See the
+    <a href="privacy.html">privacy policy</a>.
   </p>
 
   <h2>Requirements</h2>
@@ -123,7 +151,8 @@
       <tbody>
         <tr><td><strong>Platform</strong></td><td>Android phone or tablet</td></tr>
         <tr><td><strong>Price</strong></td><td>Free — no subscription, no advertising</td></tr>
-        <tr><td><strong>Languages</strong></td><td>English and العربية</td></tr>
+        <tr><td><strong>Languages</strong></td><td>English, العربية, Español, اردو, Português and Français — switched in place, with Arabic and Urdu laid out right to left</td></tr>
+        <tr><td><strong>Appearance</strong></td><td>Dark, light, or whatever the phone is set to</td></tr>
         <tr><td><strong>Account</strong></td><td>None</td></tr>
       </tbody>
     </table>
