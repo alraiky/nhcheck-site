@@ -46,5 +46,6 @@ work from a subpath as well as from a domain root.
 - The screenshots come from `android-lite/play/graphics/screenshots-phone/en-US/`
   (1, 7 and 8), cropped of their letterboxing and halved to 540 wide. They are
   demo captures: the LAN names are `Device-NN` stand-ins, never real hostnames.
-- The store link in `index.html` is a placeholder until the Google Play listing
-  is live.
+- The listing is live, and `index.html` and `docs.html` link to it:
+  `https://play.google.com/store/apps/details?id=com.nhcheck.lite`. There is no
+  App Store link because the iOS build is not published.
