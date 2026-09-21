@@ -55,7 +55,7 @@
     <div class="table-wrap" style="margin-top:20px">
       <table>
         <tbody>
-          <tr><td><strong>Wi-Fi status</strong></td><td>Signal, channel, interference and security — and the clearest channel to move to</td></tr>
+          <tr><td><strong>Wi-Fi status</strong></td><td>Signal, channel, interference and security — and the clearest channel to move to. Off Wi-Fi it judges the mobile link instead</td></tr>
           <tr><td><strong>LAN gateway</strong></td><td>Eight echoes to your router, then a sweep of the network behind it: a fault here is inside the house</td></tr>
           <tr><td><strong>ISP gateway</strong></td><td>The first public hop past it: a fault here is on the line</td></tr>
           <tr><td><strong>DNS lookup</strong></td><td>A name resolved and timed</td></tr>
@@ -71,8 +71,9 @@
     </p>
     <p style="margin-top:18px;color:var(--text-muted)">
       Two rows open further: the Wi-Fi row into an analyser that draws every network in
-      range over the spectrum it occupies, and the LAN row into the list of what
-      answered on your network, each by the name it publishes.
+      range over the spectrum it occupies — or, on mobile data, into the operator, band
+      and cells of the mobile link — and the LAN row into the list of what answered on
+      your network, each by the name it publishes.
       <a href="docs.html">Both are described in the documentation</a>.
     </p>
   </div>

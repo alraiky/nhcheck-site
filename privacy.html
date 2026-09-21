@@ -26,7 +26,7 @@
 
 <div class="page-head">
   <div class="shell">
-    <p class="eyebrow">Last updated 20 September 2026</p>
+    <p class="eyebrow">Last updated 21 September 2026</p>
     <h1>NHCheck Lite collects nothing</h1>
     <p class="lede">
       No account, no analytics, no crash reporting, no advertising, no third-party
@@ -88,15 +88,26 @@
     and gone when you close the app.
   </p>
 
+  <h2>On mobile data</h2>
+  <p>
+    With Wi-Fi off, the app reads what your phone already knows about its own mobile
+    link: the operator, the radio, the signal and its quality, the band and frequency,
+    and the identities of the cells it can hear. Android gates the cell identities
+    behind the same Location permission as the Wi-Fi scan, for the same reason — a list
+    of nearby towers can be used to infer position. All of it is read on your device
+    and shown on your device. None of it is stored, and none of it is sent anywhere.
+  </p>
+
   <h2>The location permission</h2>
   <p>
     Android requires the Location permission before any app may read the Wi-Fi network
-    name or scan for nearby networks, because a list of nearby networks can be used to
-    infer position. It is used for that alone — your position is never read, stored or
-    sent. The app never requests a location fix, never touches GPS, and never accesses
-    location in the background. Nothing is asked at launch: the app explains why before
-    the system prompt appears. Decline it and every check still runs; you lose the
-    network name and the channel advice. You can withdraw it at any time in
+    name, scan for nearby networks, or identify the mobile cells in range — because a
+    list of what is nearby, whether networks or towers, can be used to infer position.
+    It is used for those alone — your position is never read, stored or sent. The app
+    never requests a location fix, never touches GPS, and never accesses location in
+    the background. Nothing is asked at launch: the app explains why before the system
+    prompt appears. Decline it and every check still runs; you lose the network name,
+    the channel advice and the mobile link details. You can withdraw it at any time in
     <strong>Settings → Apps → NHCheck Lite → Permissions</strong>.
   </p>
 

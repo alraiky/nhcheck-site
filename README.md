@@ -30,11 +30,15 @@ work from a subpath as well as from a domain root.
 
 ## Notes
 
-- The pages describe **1.3 (versionCode 19)**, the build prepared for Play. They
-  deliberately leave out the `cellular` branch, which is not shipped: when it
-  does ship, the privacy policy gains the mobile network — the operator, the
-  radio and signal, and the identities of the cells in range — and the in-app
-  location disclosure has to say so first.
+- The pages describe **1.4 (versionCode 21)**. The mobile link shipped with it,
+  so the privacy policy carries the mobile network — the operator, the radio and
+  signal, the band, and the identities of the cells in range — and the location
+  section covers all three uses of the permission, as the in-app disclosure now
+  does. The first check is titled "Wi-Fi status" on Wi-Fi and "Link status" off
+  it, which is why the pages name both.
+- The **store listing has not been updated for 1.4**: `android-lite/play/listing/`
+  still describes 1.3, and its What's new block is the 1.3 one. The site is ahead
+  of the listing until that is written.
 - English only for now. The app itself ships six languages (English, Arabic,
   Spanish, Urdu, Portuguese, French); an Arabic mirror of this site would be a
   copy of each page with `dir="rtl"` plus a switch in the top bar.

@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
 <meta name="theme-color" content="#05070a" />
 <title>Documentation — NHCheck</title>
-<meta name="description" content="What each of NHCheck Lite's five checks measures, the thresholds behind every verdict, and the Wi-Fi analyser and LAN page behind the rows." />
+<meta name="description" content="What each of NHCheck Lite's five checks measures, the thresholds behind every verdict, and the Wi-Fi analyser, mobile link and LAN page behind the rows." />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
@@ -31,8 +31,8 @@
     <p class="lede">
       Five checks run in order, about thirty seconds in all. The speed test is last
       because it saturates the connection and would corrupt the figures before it.
-      Two of the rows open into a page of their own: the air around you, and the
-      devices on your network.
+      Two of the rows open into a page of their own: the radio you are on — the air
+      around you, or the mobile link — and the devices on your network.
     </p>
   </div>
 </div>
@@ -44,7 +44,7 @@
     <table>
       <thead><tr><th>Check</th><th>What it does</th></tr></thead>
       <tbody>
-        <tr><td><strong>Wi-Fi status</strong></td><td>Reads signal, noise, channel, band, standard and security, then scans the neighbours and names the clearest channel in the band</td></tr>
+        <tr><td><strong>Wi-Fi status</strong></td><td>Reads signal, noise, channel, band, standard and security, then scans the neighbours and names the clearest channel in the band. Off Wi-Fi the row becomes <strong>Link status</strong> and judges the other radio instead: the operator, the generation, the signal and its quality, the band, and the cells in range</td></tr>
         <tr><td><strong>LAN gateway</strong></td><td>Eight echoes to your router — latency, loss and jitter of the Wi-Fi link itself — then a sweep of the network behind it, counting what answered</td></tr>
         <tr><td><strong>ISP gateway</strong></td><td>Finds the first public router past yours and measures it with six echoes</td></tr>
         <tr><td><strong>DNS lookup</strong></td><td>Resolves a name through your network's resolver and times it</td></tr>
@@ -82,6 +82,11 @@
           <td>Not connected</td>
         </tr>
         <tr>
+          <td><strong>Mobile link</strong></td>
+          <td>RSRP below −110 dBm · signal-to-interference-and-noise below 0 dB · still on 2G or 3G</td>
+          <td>RSRP below −120 dBm</td>
+        </tr>
+        <tr>
           <td><strong>LAN gateway</strong></td>
           <td>Loss 1% or more · average over 100 ms · jitter over 60 ms, or larger than the link's own average</td>
           <td>No reply</td>
@@ -113,12 +118,21 @@
 
   <h2>Behind two of the rows</h2>
   <p>
-    <strong>The Wi-Fi row</strong> opens an analyser. Every network in range is drawn
+    <strong>The Wi-Fi row</strong>, on Wi-Fi, opens an analyser. Every network in range is drawn
     as an arc over the spectrum it occupies, so two networks nominally on different
     channels are visibly on top of each other when they overlap. Beside it, every radio
     ranked by strength, and your own link traced second by second — signal as bars,
     signal-to-noise as a red line over them — so a sag shows as a shape rather than
     disappearing into an average.
+  </p>
+  <p>
+    <strong>The same row on mobile data</strong> opens the mobile link instead: the
+    operator and the generation, the signal with its quality, the band and frequency,
+    and every cell the phone can hear — each with its own signal, so the one you are
+    registered to can be read against the rest. It is traced second by second like the
+    Wi-Fi link. Android gates the cell identities behind the Location permission, for
+    the same reason it gates the Wi-Fi scan; see the
+    <a href="privacy.html">privacy policy</a>.
   </p>
   <p>
     <strong>The LAN row</strong> opens the list of what is on your network: every
@@ -140,9 +154,10 @@
     Android requires a location permission before an app may read the connected Wi-Fi
     network's name or scan for neighbours. NHCheck Lite asks for it for that alone: it
     never requests a location fix, never touches GPS, and never reads location in the
-    background. Decline it and every check still runs — you lose the network name, the
-    channel advice and the analyser's neighbour list. See the
-    <a href="privacy.html">privacy policy</a>.
+    background. The same permission gates the identities of the mobile cells in range,
+    which is the other thing it is used for. Decline it and every check still runs —
+    you lose the network name, the channel advice, the analyser's neighbour list and
+    the detail of the mobile link. See the <a href="privacy.html">privacy policy</a>.
   </p>
 
   <h2>Requirements</h2>
