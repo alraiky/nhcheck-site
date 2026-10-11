@@ -118,21 +118,23 @@
 
   <h2>Comparing content networks</h2>
   <p>
-    The Speed page can pull a real public file from each of five content networks
-    &mdash; Cloudflare, Google, Fastly, Akamai and Amazon CloudFront &mdash; on one
-    connection and then on four at once, so a line that is fast to one network and slow
-    to another is something you can see rather than guess at. The Akamai file is a
-    Microsoft installer that Akamai serves; the Amazon file is an AWS installer. It runs
-    only when you open that page and ask for it, never as part of a run.
+    The Speed page can pull a real public file from each of six content networks
+    &mdash; Cloudflare, Google, Fastly, Akamai, Amazon CloudFront and Meta &mdash; on
+    one connection and then on four at once, so a line that is fast to one network and
+    slow to another is something you can see rather than guess at. The Akamai file is a
+    Microsoft installer that Akamai serves; the Amazon file is an AWS installer; for
+    Meta, which publishes no file, the app reads Instagram&rsquo;s front page and pulls
+    the largest script it references. It runs only when you open that page and ask for
+    it, never as part of a run.
   </p>
   <p>
     The page can also show which of those networks serves each part of X, TikTok,
-    Snapchat or YouTube. That is a handful of name lookups through your own resolver,
+    Snapchat, Instagram or YouTube. That is a handful of name lookups through your own resolver,
     the same ones your phone makes when it opens those apps; nothing is fetched from
     the sites themselves.
   </p>
   <p>
-    Each of the five sees the public address the request came from, as any site you
+    Each of the six sees the public address the request came from, as any site you
     open does; nothing identifying goes with it, and the files are theirs, not yours.
     It moves real data &mdash; up to a few hundred megabytes on a fast line &mdash; so
     it is worth knowing about on a metered plan. The figures are drawn on your screen
