@@ -129,9 +129,11 @@
   </p>
   <p>
     The page can also show which of those networks serves each part of X, TikTok,
-    Snapchat, Instagram or YouTube. That is a handful of name lookups through your own resolver,
-    the same ones your phone makes when it opens those apps; nothing is fetched from
-    the sites themselves.
+    Snapchat or YouTube. That is a handful of name lookups through your own resolver,
+    the same ones your phone makes when it opens those apps, plus one fetch of the
+    site&rsquo;s public front page, which is read for the other hosts of its own it
+    loads from that day. That site sees your public address for that one request, as
+    it does whenever you open it; nothing of yours is sent with it.
   </p>
   <p>
     Each of the six sees the public address the request came from, as any site you
