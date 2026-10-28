@@ -45,8 +45,9 @@
 
   <h2>What stays on the device</h2>
   <p>
-    Your language and appearance choices, so they are remembered next time. That is
-    all. Results are held only while the app is open.
+    Your language and appearance choices, whether you said the router is yours, and
+    the plan speed you typed on the Speed page so results can be judged against it.
+    That is all. Results are held only while the app is open.
   </p>
   <p>
     Both settings go when you uninstall the app. They are also small enough to be
@@ -64,7 +65,8 @@
         <tr><td><strong>Your router</strong></td><td>Echo requests that never leave your own network</td></tr>
         <tr><td><strong>The first public router past it</strong></td><td>Probes to find it, then echo requests to measure it</td></tr>
         <tr><td><strong>A DNS resolver</strong></td><td>One name lookup, to time it. No page is fetched.</td></tr>
-        <tr><td><strong>Cloudflare</strong></td><td>Filler data down and up for eight seconds each, to measure throughput</td></tr>
+        <tr><td><strong>Cloudflare</strong></td><td>Filler data down and up for eight seconds each, to measure throughput. While it runs, a short connection to the same server and an echo to your router every few hundred milliseconds, to see whether latency rises under load</td></tr>
+        <tr><td><strong>Cloudflare, over IPv6 and IPv4</strong></td><td>One connection attempt to its resolver address over each, to tell whether IPv6 works here. Only when your network has given this device an IPv6 address; nothing is sent past the handshake</td></tr>
       </tbody>
     </table>
   </div>
