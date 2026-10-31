@@ -149,6 +149,51 @@
     <figcaption>The LAN page — what answered, and what it calls itself</figcaption>
   </figure>
 
+  <h2>More tests</h2>
+  <p>
+    Under the five checks, a page of tests a run does not make. Each starts when you tap it.
+  </p>
+  <p>
+    <strong>Stability</strong> pings your router, your provider&rsquo;s first router and the
+    internet four times a second for a minute and draws every echo as a cell: answered, slow
+    or lost. What matters is which of the three lost an echo when the others did not. The
+    internet is judged first, because it is the one you feel: if it drops and your router drops
+    at the same moments, the break is the Wi-Fi or the router, with radar avoidance named when
+    you are on a DFS channel; if only your provider&rsquo;s first router drops with it, it is the
+    line; if nothing nearer drops, it is past your router. A router that ignores a few pings
+    while the internet is untouched is answering its own pings last, and is not called a fault.
+  </p>
+  <p>
+    <strong>Packet size</strong> sends echoes that must not be split, in growing sizes, and
+    finds the largest that crosses. A path that says &ldquo;too big&rdquo; when it must is
+    normal &mdash; PPPoE and some fibre lines carry 1492 &mdash; and apps adapt. A path that
+    drops big packets without saying so is a black hole: connections that send big packets
+    stall, which is how a few sites hang while the rest load. On Android the phone&rsquo;s own
+    ping does the sending, and a phone whose ping cannot forbid splitting says so rather than
+    blaming the network.
+  </p>
+  <p>
+    <strong>Speed between two phones</strong> measures the Wi-Fi alone. One phone taps Receive,
+    the other taps Send, and four connections carry filler in each direction. Two phones through
+    a router cross the Wi-Fi twice, so what arrives is about half what one phone can get; the
+    page uses that to say whether the Wi-Fi or the line is what limits your internet, using the
+    speed from your last run. An iPhone and an Android phone measure each other.
+  </p>
+  <p>
+    <strong>On the DNS page</strong>, after the comparison, one random name under google.com
+    that cannot exist is asked of your resolver and of each public one. A resolver that answers
+    with an address is rewriting DNS, and a public resolver that does is being answered for by
+    something on your network.
+  </p>
+  <p>
+    <strong>On the Wi-Fi row</strong>, the app remembers what answered for each network the last
+    time &mdash; the router&rsquo;s address, the maker of its access point, the DNS servers &mdash;
+    and says so when a name is suddenly answered by something else. Replace your router and it
+    will tell you once; if you did not, treat the network with care. Neither Android nor iOS
+    lets an app read the hardware addresses of the other devices on your network, so the LAN
+    page cannot name what made each one.
+  </p>
+
   <h2>Permission</h2>
   <p>
     Android requires a location permission before an app may read the connected Wi-Fi

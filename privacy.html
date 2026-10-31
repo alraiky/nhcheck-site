@@ -26,7 +26,7 @@
 
 <div class="page-head">
   <div class="shell">
-    <p class="eyebrow">Last updated 11 October 2026</p>
+    <p class="eyebrow">Last updated 31 October 2026</p>
     <h1>NHCheck Lite collects nothing</h1>
     <p class="lede">
       No account, no analytics, no crash reporting, no advertising, no third-party
@@ -47,7 +47,12 @@
   <p>
     Your language and appearance choices, whether you said the router is yours, and
     the plan speed you typed on the Speed page so results can be judged against it.
-    That is all. Results are held only while the app is open.
+    Also, for the last few Wi-Fi networks you joined: what answered for each the last
+    time &mdash; the router&rsquo;s address, the maker of its access point, its hardware
+    address where the phone is allowed to read it, and the DNS servers it handed out.
+    It is kept under a scrambled form of the network&rsquo;s name rather than the name,
+    and it is only used to tell you when a network name is suddenly answered by something
+    else. That is all. Results are held only while the app is open.
   </p>
   <p>
     Both settings go when you uninstall the app. They are also small enough to be
@@ -139,6 +144,35 @@
     It moves real data &mdash; up to a few hundred megabytes on a fast line &mdash; so
     it is worth knowing about on a metered plan. The figures are drawn on your screen
     and kept nowhere.
+  </p>
+
+  <h2>More tests</h2>
+  <p>
+    Beside the five checks there is a page of tests the app does not run by itself. Each
+    starts only when you tap it, and stops when you leave the page.
+  </p>
+  <p>
+    <strong>Stability</strong> sends an echo four times a second for a minute to your
+    router, to the first public router past it, and to 8.8.8.8 &mdash; the same address
+    the route walk already uses &mdash; and draws what came back.
+    <strong>Packet size</strong> sends echoes of growing size, flagged not to be split, to
+    8.8.8.8 and to your router, to find the largest that crosses. Nothing but the echoes
+    is sent, and nothing identifying goes with them.
+  </p>
+  <p>
+    <strong>Is DNS rewritten</strong> runs on the DNS page, alongside the comparison. It
+    asks your own resolver and each of the four public ones for one random name under
+    google.com that cannot exist, and reads whether any of them invents an address for it.
+    Nothing real is looked up, and your own lookups are never sent.
+  </p>
+  <p>
+    <strong>Speed between two phones</strong> never touches the internet. One phone listens
+    and announces itself on your local network as &ldquo;NHCheck&rdquo; and four random
+    characters &mdash; not your phone&rsquo;s name &mdash; and the other finds it and sends
+    filler data for a few seconds in each direction. The listening phone accepts one device
+    at a time, at most four connections, ten seconds each, and only while that page is open.
+    Both phones see each other&rsquo;s address on your network, as any two devices on it
+    can; nothing leaves the network.
   </p>
 
   <h2>On mobile data</h2>
