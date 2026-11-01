@@ -164,7 +164,12 @@
     <strong>Is DNS rewritten</strong> runs on the DNS page, alongside the comparison. It
     asks your own resolver and each of the four public ones for one random name under
     google.com that cannot exist, and reads whether any of them invents an address for it.
-    Nothing real is looked up, and your own lookups are never sent.
+    It then asks each of them for two names, <code>whoami.akamai.net</code> (run by Akamai)
+    and <code>whoami.ultradns.net</code> (run by UltraDNS), which are built to reply with the
+    address of whoever asked. Two resolvers that give the same reply were answered by the
+    same machine. Those two companies&rsquo; name servers see the address of the resolver
+    that passed the question on, and not your phone&rsquo;s own address. Nothing real is
+    looked up, and your own lookups are never sent.
   </p>
   <p>
     <strong>Speed between two phones</strong> never touches the internet. One phone listens

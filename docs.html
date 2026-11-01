@@ -186,7 +186,12 @@
     <strong>On the DNS page</strong>, after the comparison, one random name under google.com
     that cannot exist is asked of your resolver and of each public one. A resolver that answers
     with an address is rewriting DNS, and a public resolver that does is being answered for by
-    something on your network.
+    something on your network. Then each resolver is asked who it is, with two names built to
+    reply with the address of whoever asked (<code>whoami.akamai.net</code> and
+    <code>whoami.ultradns.net</code>). Resolvers run by different companies answer from different
+    addresses; if two give the same one, something on your network is answering for them, and
+    the fix is Private DNS on Android or an encrypted DNS profile on iPhone. The shield icon on
+    the DNS page shows that table in place of the timings.
   </p>
   <p>
     <strong>On the Wi-Fi row</strong>, the app remembers what answered for each network the last
